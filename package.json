@@ -1,0 +1,20 @@
+{
+  "name": "image-search-wrapper-nodejs",
+  "version": "1.0.0",
+  "description": "A Image search wrapper to google images, simply put in your appId and secret plugin as a route to expressjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lee182/image-search-wrapper-nodejs.git"
+  },
+  "author": "Jonathan T L Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lee182/image-search-wrapper-nodejs/issues"
+  },
+  "homepage": "https://github.com/Lee182/image-search-wrapper-nodejs#readme"
+}
