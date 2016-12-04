@@ -47,6 +47,10 @@ function main({history_cap, cors, gg_id, gg_key}) {
     })
   })
 
+  route.get('*', function(req,res){
+    res.status(404).json({err:'api documentation availible at https://github.com/Lee182/image-search-wrapper-nodejs'})
+  })
+
   return route
 }
 
