@@ -1,14 +1,14 @@
 # image-search-wrapper-nodejs
 A Image search wrapper to google images, simply put in your appId and secret plugin as a route to expressjs
 ## Demo
-demo availible at (https://lee182-google-image-api.herokuapp.com)[https://lee182-google-image-api.herokuapp.com/recent]
+demo availible at [https://lee182-google-image-api.herokuapp.com](https://lee182-google-image-api.herokuapp.com/recent)
 
 ### endpoints
-(GET /recent)[https://lee182-google-image-api.herokuapp.com/recent]
+[GET /recent](https://lee182-google-image-api.herokuapp.com/recent)
 
-(GET /search/katz)[https://lee182-google-image-api.herokuapp.com/search/katz]
+[GET /search/katz](https://lee182-google-image-api.herokuapp.com/search/katz)
 
-(GET /search/dogs?skip=101&limit=3)[https://lee182-google-image-api.herokuapp.com/search//search/dogs?skip=101&limit=3]
+[GET /search/dogs?offset=101&limit=3](https://lee182-google-image-api.herokuapp.com/search//search/dogs?offset=101&limit=3)
 
 ## API
 ### GET /search/:img
@@ -26,7 +26,7 @@ an array of results each containing
   ...
 ]
 ```
-### query ?skip=number (optional)
+### query ?offset=number (optional)
 the offset query determines the number of results to skip over. by default the number is 0
 
 ### query &limit=count (optional)

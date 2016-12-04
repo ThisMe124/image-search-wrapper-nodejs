@@ -34,7 +34,7 @@ function main({history_cap, cors, gg_id, gg_key}) {
   route.get('/search/:img',function(req,res){
     var o = {
       search: req.params.img,
-      skip: Number(req.query.skip)+1 || 1,
+      skip: Number(req.query.offset)+1 || 1,
       limit: Number(req.query.limit) || 10,
       d: (new Date()).toISOString()
     }
