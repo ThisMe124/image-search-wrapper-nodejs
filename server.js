@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
-const img_search = require('./app.js')({
+const img_search = require('./index.js')({
   history_cap: 10,
   cors: true,
   gg_id: process.env.GG_ID || require('./keys').GG_ID,
