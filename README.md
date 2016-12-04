@@ -1,5 +1,14 @@
 # image-search-wrapper-nodejs
 A Image search wrapper to google images, simply put in your appId and secret plugin as a route to expressjs
+## Demo
+demo availible at (https://lee182-google-image-api.herokuapp.com)[https://lee182-google-image-api.herokuapp.com/recent]
+
+### endpoints
+(GET /recent)[https://lee182-google-image-api.herokuapp.com/recent]
+
+(GET /search/katz)[https://lee182-google-image-api.herokuapp.com/search/katz]
+
+(GET /search/dogs?skip=101&limit=3)[https://lee182-google-image-api.herokuapp.com/search//search/dogs?skip=101&limit=3]
 
 ## API
 ### GET /search/:img
@@ -25,3 +34,33 @@ by default the limit is to 10 results
 
 ### GET /recent
 will return recent search queries in as a array
+
+### install on your server
+```$ npm install Lee182/image-search-wrapper-nodejs```
+in server.js
+```javascript
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 8080
+
+const img_search = require('./index.js')({
+  history_cap: 10, // the size of the recent path which stores search queries
+  cors: true, // enable Cross Origin Requests
+  gg_id: process.env.GG_ID || require('./keys').GG_ID,
+  gg_key: process.env.GG_KEY || require('./keys').GG_KEY,
+})
+
+app.use('/',img_search)
+
+app.listen(port, function(){
+  console.log('server listening at http://localhost:'+port)
+})
+```
+GG_ID and GG_KEY can be obtained from (google)[https://google.com]
+
+## Author & Licence
+Author: **[Jonathan T L Lee](https://github.com/Lee182)**
+
+Licence: MIT
+
+Repo: [https://github.com/Lee182/image-search-wrapper-nodejs]( https://github.com/Lee182/image-search-wrapper-nodejs)
