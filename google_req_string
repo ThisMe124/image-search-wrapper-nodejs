@@ -1,0 +1,7 @@
+https://www.googleapis.com/customsearch/v1?
+  q=katz
+  &searchType=image
+  &start=20
+  &num=10
+  &cx=gg_id
+  &key=gg_key
