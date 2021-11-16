@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
+app.set('json spaces', 2)
 
 const img_search = require('./index.js')({
   history_cap: 10,
