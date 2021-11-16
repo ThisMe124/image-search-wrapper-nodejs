@@ -3,6 +3,7 @@ const express = require('express')
 
 function main({history_cap, cors, gg_id, gg_key}) {
   var route = express.Router()
+  route.set('json spaces', 2)
   var img_search = google_imgs(gg_id, gg_key)
 
   if (isNaN(history_cap)) {
