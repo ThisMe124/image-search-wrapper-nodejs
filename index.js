@@ -31,7 +31,7 @@ function main({history_cap, cors, gg_id, gg_key}) {
     res.json(history)
   })
 
-  route.set('json spaces', 2)
+  
   route.get('/search/:img',function(req,res){
     var o = {
       search: req.params.img,
